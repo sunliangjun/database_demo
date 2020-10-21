@@ -1,0 +1,4 @@
+
+
+class ThingState(object):
+    pass
