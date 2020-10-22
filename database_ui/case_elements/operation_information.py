@@ -1,4 +1,4 @@
-from case_run.position_elements import PositionElements as PE
+from database_ui.case_run.position_elements import PositionElements as PE
 
 
 # 系统资源信息采集

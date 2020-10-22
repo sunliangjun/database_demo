@@ -1,7 +1,7 @@
 import time, datetime
 import unittest
 import yagmail
-from case_run.HTMLTestReportCN import HTMLTestRunner
+from database_ui.case_run.HTMLTestReportCN import HTMLTestRunner
 
 
 class SendReport(object):
@@ -16,11 +16,11 @@ class SendReport(object):
         yag.send(receivername, subject, contents, report)
 
     def test_report(self):
-        test_dir = "D:\\pycharm\\workspace\\unittest_demo\\case_run"
+        test_dir = "D:\\pycharm\\github\\database_demo\\case_run"
         # suit = unittest.defaultTestLoader.discover(test_dir, pattern="unittest_case.py")
         suit = unittest.defaultTestLoader.discover(test_dir, pattern="try_case.py")
         now_time = time.strftime("%Y-%m-%d %H-%M-%S")
-        html_report = "D:\\pycharm\\workspace\\unittest_demo\\case_report\\" + now_time + "result.html"
+        html_report = "D:\\pycharm\\github\\database_demo\\case_report\\" + now_time + "result.html"
         with open(html_report, "wb") as f:
             runner = HTMLTestRunner(stream=f, title="测试报告", description="运行环境:win10，Firefox浏览器", verbosity=2)
             runner.run(suit)

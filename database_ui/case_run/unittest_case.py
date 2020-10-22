@@ -1,8 +1,8 @@
 import unittest, time, datetime
-from case_run.position_elements import PositionElements as PE
-from case_run.read_data import ReadData as RD
-from case_elements.operation_information import DatabaseInformation as DI
-from case_elements.operation_information import OperationInformation as OI
+from database_ui.case_run.position_elements import PositionElements as PE
+from database_ui.case_run.read_data import ReadData as RD
+from database_ui.case_elements.operation_information import DatabaseInformation as DI
+from database_ui.case_elements.operation_information import OperationInformation as OI
 
 
 class unittestCase(unittest.TestCase):
